@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Your description here">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+
+    <title>simon joller architecture portfolio</title>
+
+    <!-- CSS (Replace with your own stylesheet) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- JavaScript for CSS Variable Support Check -->
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e,
+                t = document.createElement("style");
+            return (
+                (t.innerHTML = "root: { --tmp-var: bold; }"),
+                document.head.appendChild(t),
+                (e = !!(
+                    window.CSS &&
+                    window.CSS.supports &&
+                    window.CSS.supports("font-weight", "var(--tmp-var)")
+                )),
+                t.parentNode.removeChild(t),
+                e
+            );
+        };
+        supportsCssVars() ||
+            alert(
+                "Please view this website in a modern browser that supports CSS Variables."
+            );
+    </script>
+</head>
+
+<body style="--bg-color:#C01807">
+    <!-- Navigation -->
+    <nav class="navigation">
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#world">World</a></li>
+            <li><a href="#shop">Shop</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="start-screen">
+        <div class="start-screen-logo">
+            <!-- Logo or Main Image -->
+            <img src="media/site/00003/logo.png" alt="Logo" width="1100" height="108">
+        </div>
+        <div class="start-screen-btn">
+            <a href="#shop">Enter the Shop</a>
+        </div>
+    </main>
+
+    <!-- JavaScript for Background Image Selection -->
+    <script type="module">
+        let bgImage;
+        const bgImageSelect = () => {
+            if (window.innerWidth > window.innerHeight) {
+                bgImage = document.querySelector('.start-screen-bg');
+            } else {
+                bgImage = document.querySelector('.start-screen-bg-mobile');
+            }
+        };
+
+        bgImageSelect();
+        window.onresize = bgImageSelect;
+
+        const imgSize = [bgImage ? bgImage.width : 1000, bgImage ? bgImage.height : 1000];
+
+        // Placeholder for vertex and fragment shaders
+        const vertex = `/* Vertex shader code here */`;
+        const fragment = `/* Fragment shader code here */`;
+
+        // Example renderer (requires an appropriate graphics library or framework)
+        // Replace this with your actual rendering logic
+        (function() {
+            const renderer = {};  // Your renderer logic here
+            const gl = {};  // WebGL context or similar
+
+            function resize() {
+                // Resize logic here
+            }
+
+            function update() {
+                requestAnimationFrame(update);
+                // Update and render logic here
+            }
+
+            window.addEventListener("resize", resize, false);
+            resize();
+            update();
+        })();
+    </script>
+
+    <!-- Your custom scripts -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
