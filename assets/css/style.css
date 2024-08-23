@@ -50,10 +50,12 @@ html, body {
     justify-content: center;
     height: 100vh;
     text-align: center;
-    background-image: url('media/site/00002/011.png'); /* Simplified path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+/* Background image handling */
+.start-screen-bg,
+.start-screen-bg-mobile {
+    display: none; /* These are not directly visible but used in JavaScript */
 }
 
 /* Logo styling */
